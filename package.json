@@ -1,0 +1,20 @@
+{
+  "name": "curso-basico-tailwind-2-y-3",
+  "version": "1.0.0",
+  "description": "Platzi curso con proyecto Platzi Travel",
+  "main": "index.js",
+  "scripts": {
+    "watch": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/css/output.css --watch"
+  },
+  "keywords": [
+    "Platzi",
+    "TailwindCSS"
+  ],
+  "author": "esthedav",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1"
+  }
+}
