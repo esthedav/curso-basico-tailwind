@@ -18,16 +18,67 @@
 
 <body class="font-Montserrat h-screen">
   
-  <nav></nav>
+  <header class="hidden h-[73px] bg-white lg:flex justify-between mx-24 items-center text-primary font-bold text-lg">
+    <h1>Platzi Travel</h1>
+    <nav >
+      <ul class="flex gap-8">
+        <li>
+          <a href="#recomendations">Locations</a>
+        <li>
+          <a href="#trending-stays">Stays</a>
+        <li>
+          <a href="#faqs">FAQs</a>
+        <li>
+          <a href="#about-us">About Us</a>
+      </ul>
+    </nav>
 
-  <main id="home" class="h-[487px] relative mb-6">
+    <div aria-label="Action Section, search, night-mode user">
+      <!-- Search button -->
+      <div class="w-[344px] flex justify-end items-center gap-8">
+
+        <div class="w-[20px] h-12 outline-none flex items-center justify-center bg-white gap-4 text-primary focus-within:text-black transition-all duration-500 ease-in-out hover:w-[250px] focus-within:w-[250px]">
+          <figure class="cursor-pointer left-6">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" ">
+              <path class="fill-current text-principal" fill-rule="evenodd" clip-rule="evenodd" d="M8 3.99997C6.93913 3.99997 5.92172 4.4214 5.17157 5.17155C4.42143 5.92169 4 6.93911 4 7.99997C4 9.06084 4.42143 10.0783 5.17157 10.8284C5.92172 11.5785 6.93913 12 8 12C9.06087 12 10.0783 11.5785 10.8284 10.8284C11.5786 10.0783 12 9.06084 12 7.99997C12 6.93911 11.5786 5.92169 10.8284 5.17155C10.0783 4.4214 9.06087 3.99997 8 3.99997ZM2 7.99997C1.99988 7.05568 2.22264 6.12468 2.65017 5.28271C3.0777 4.44074 3.69792 3.71157 4.4604 3.1545C5.22287 2.59743 6.10606 2.22819 7.03815 2.07681C7.97023 1.92543 8.92488 1.99618 9.82446 2.28332C10.724 2.57046 11.5432 3.06587 12.2152 3.72927C12.8872 4.39266 13.3931 5.20531 13.6919 6.10111C13.9906 6.9969 14.0737 7.95056 13.9343 8.88452C13.795 9.81848 13.4372 10.7064 12.89 11.476L17.707 16.293C17.8892 16.4816 17.99 16.7342 17.9877 16.9964C17.9854 17.2586 17.8802 17.5094 17.6948 17.6948C17.5094 17.8802 17.2586 17.9854 16.9964 17.9876C16.7342 17.9899 16.4816 17.8891 16.293 17.707L11.477 12.891C10.5794 13.5293 9.52335 13.9081 8.42468 13.9861C7.326 14.0641 6.22707 13.8381 5.2483 13.3329C4.26953 12.8278 3.44869 12.063 2.87572 11.1223C2.30276 10.1816 1.99979 9.10141 2 7.99997Z" fill="#3F3F46"/>
+              </svg>
+          </figure>
+          <input id="input-search" type="search" name="" id="" placeholder="San Francisco" class="h-full w-4/5 focus-within:w-4/5 text-center outline-none focus:text-black focus:font-semibold"
+        </div>
+      </div>
+      <!-- Dark Mode -->
+      <button 
+      class="h-8 w-8 rounded-[50%] text-primary transition duration-300 ease-in-out hover:bg-primary hover:text-white hover:scale-110 flex items-center justify-center">
+        <figure >
+          <svg width="20" height="20" viewBox="0 0 29 29" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25.0748 19.2748C22.9267 20.2465 20.5334 20.5405 18.214 20.1177C15.8945 19.6949 13.7589 18.5753 12.0918 16.9082C10.4246 15.241 9.30509 13.1055 8.88228 10.786C8.45946 8.46654 8.75347 6.0733 9.72512 3.92514C8.01494 4.69801 6.51777 5.87422 5.36208 7.35288C4.20638 8.83154 3.42666 10.5685 3.08979 12.4147C2.75293 14.261 2.86898 16.1614 3.428 17.9529C3.98702 19.7444 4.97232 21.3736 6.29935 22.7006C7.62639 24.0276 9.25556 25.0129 11.0471 25.572C12.8386 26.131 14.739 26.247 16.5852 25.9102C18.4315 25.5733 20.1684 24.7936 21.6471 23.6379C23.1257 22.4822 24.302 20.985 25.0748 19.2748V19.2748Z" fill="#CC2D4A"/>
+            </svg>
+        </figure>
+      </button>
+      <!-- User button -->
+      <button class="h-8 w-8 rounded-[50%] text-gray-300 transition duration-300 ease-in-out hover:bg-primary hover:text-white hover:scale-110 flex items-center justify-center">
+        <figure>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 9C10.7956 9 11.5587 8.68393 12.1213 8.12132C12.6839 7.55871 13 6.79565 13 6C13 5.20435 12.6839 4.44129 12.1213 3.87868C11.5587 3.31607 10.7956 3 10 3C9.20435 3 8.44129 3.31607 7.87868 3.87868C7.31607 4.44129 7 5.20435 7 6C7 6.79565 7.31607 7.55871 7.87868 8.12132C8.44129 8.68393 9.20435 9 10 9ZM3 18C3 17.0807 3.18106 16.1705 3.53284 15.3212C3.88463 14.4719 4.40024 13.7003 5.05025 13.0503C5.70026 12.4002 6.47194 11.8846 7.32122 11.5328C8.1705 11.1811 9.08075 11 10 11C10.9193 11 11.8295 11.1811 12.6788 11.5328C13.5281 11.8846 14.2997 12.4002 14.9497 13.0503C15.5998 13.7003 16.1154 14.4719 16.4672 15.3212C16.8189 16.1705 17 17.0807 17 18H3Z" fill="#3F3F46"/>
+            </svg>
+        </figure>
+      </button>
+      
+    </div>
+    
+  </header>
+
+  <main id="home" class="h-[540px] relative mb-6">
 
     <figure class="w-full h-full">
-      <img src="./css/img/sanFrancisco.jpg" alt="" class="h-full w-full object-cover">
+      <picture>
+        <source srcset="./css/img/sanFranciscoDesktop.jpg" media="(min-width: 1024px)">
+        <img srcset="./css/img/sanFrancisco.jpg" alt="A picture of the San Francisco bridge taken from afar with long lens" class="h-full w-full object-cover">
+      </picture>
     </figure>
 
     <button 
-    class="h-8 w-[56px] absolute right-[22px] top-6 bg-white rounded-3xl text-primary transition duration-300 ease-in-out hover:bg-primary hover:text-white hover:scale-110 flex items-center justify-center">
+    class="h-8 w-[56px] absolute right-[22px] top-6 bg-white rounded-3xl text-primary transition duration-300 ease-in-out hover:bg-primary hover:text-white hover:scale-110 flex items-center justify-center lg:hidden">
       <figure >
         <svg width="20" height="20" viewBox="0 0 29 29" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M25.0748 19.2748C22.9267 20.2465 20.5334 20.5405 18.214 20.1177C15.8945 19.6949 13.7589 18.5753 12.0918 16.9082C10.4246 15.241 9.30509 13.1055 8.88228 10.786C8.45946 8.46654 8.75347 6.0733 9.72512 3.92514C8.01494 4.69801 6.51777 5.87422 5.36208 7.35288C4.20638 8.83154 3.42666 10.5685 3.08979 12.4147C2.75293 14.261 2.86898 16.1614 3.428 17.9529C3.98702 19.7444 4.97232 21.3736 6.29935 22.7006C7.62639 24.0276 9.25556 25.0129 11.0471 25.572C12.8386 26.131 14.739 26.247 16.5852 25.9102C18.4315 25.5733 20.1684 24.7936 21.6471 23.6379C23.1257 22.4822 24.302 20.985 25.0748 19.2748V19.2748Z" fill="#CC2D4A"/>
@@ -35,7 +86,7 @@
       </figure>
     </button>
 
-    <div class="w-[344px] h-12 absolute top-[73px] left-6 rounded-3xl outline-none flex items-center justify-center bg-white px-4 gap-4 shadow-md focus-within:text-primary">
+    <div class="w-[344px] h-12 absolute top-[73px] left-6 rounded-3xl outline-none flex items-center justify-center bg-white px-4 gap-4 shadow-md focus-within:text-primary lg:hidden">
       <figure>
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" ">
           <path class="fill-current text-principal" fill-rule="evenodd" clip-rule="evenodd" d="M8 3.99997C6.93913 3.99997 5.92172 4.4214 5.17157 5.17155C4.42143 5.92169 4 6.93911 4 7.99997C4 9.06084 4.42143 10.0783 5.17157 10.8284C5.92172 11.5785 6.93913 12 8 12C9.06087 12 10.0783 11.5785 10.8284 10.8284C11.5786 10.0783 12 9.06084 12 7.99997C12 6.93911 11.5786 5.92169 10.8284 5.17155C10.0783 4.4214 9.06087 3.99997 8 3.99997ZM2 7.99997C1.99988 7.05568 2.22264 6.12468 2.65017 5.28271C3.0777 4.44074 3.69792 3.71157 4.4604 3.1545C5.22287 2.59743 6.10606 2.22819 7.03815 2.07681C7.97023 1.92543 8.92488 1.99618 9.82446 2.28332C10.724 2.57046 11.5432 3.06587 12.2152 3.72927C12.8872 4.39266 13.3931 5.20531 13.6919 6.10111C13.9906 6.9969 14.0737 7.95056 13.9343 8.88452C13.795 9.81848 13.4372 10.7064 12.89 11.476L17.707 16.293C17.8892 16.4816 17.99 16.7342 17.9877 16.9964C17.9854 17.2586 17.8802 17.5094 17.6948 17.6948C17.5094 17.8802 17.2586 17.9854 16.9964 17.9876C16.7342 17.9899 16.4816 17.8891 16.293 17.707L11.477 12.891C10.5794 13.5293 9.52335 13.9081 8.42468 13.9861C7.326 14.0641 6.22707 13.8381 5.2483 13.3329C4.26953 12.8278 3.44869 12.063 2.87572 11.1223C2.30276 10.1816 1.99979 9.10141 2 7.99997Z" fill="#3F3F46"/>
@@ -44,97 +95,100 @@
       <input id="input-search" type="search" name="" id="" placeholder="San Francisco" class="h-full w-[40%] text-center outline-none transition-all ease-in-out duration-300 focus:w-[80%] focus:text-black focus:font-semibold">
     </div>
 
+    <h2 class="w-[404px] font-bold text-4xl absolute top-32 left-24">
+      Find More Locations like this
+    </h2>
+
     <button 
-    class="h-12 w-[191px] absolute left-24 bottom-14 bg-white rounded-3xl font-semibold text-primary transition duration-300 ease-in-out hover:bg-primary hover:text-white hover:scale-110">
+    class="h-12 w-[191px] absolute left-24 bottom-60 bg-white rounded-3xl font-semibold text-primary transition duration-300 ease-in-out hover:bg-primary hover:text-white hover:scale-110">
       Explore More
     </button>
 
   </main>
 
-  <section id="recomendations"
-  class="h-[254px]">
+  <section id="recomendations">
 
-    <h2 class="text-2xl font-semibold text-primary mb-8 ml-4">
+    <h2 class="text-2xl lg:text-4xl font-semibold text-primary mb-4 lg:my-8 ml-4 lg:ml-24 ">
       Our Recomendations
     </h2>
 
-    <div class="h-[192px] w-auto pt-2 pb-4 flex gap-4 overflow-x-auto scrol ">
+    <div class="w-auto pt-2 pb-4 flex gap-4 lg:gap-6 overflow-x-auto ">
 
-      <article class="w-min-[155px] w-[155px] h-[187] rounded-lg bg-secondary shadow-[0_1px_1px_1px_rgba(0,0,0,0.25)] shrink-0 ml-4 hover:scale-105 transition-all ease-in-out duration-300">
-        <figure class="h-[109px] w-full" >
+      <article class="w-[155px] lg:w-[278px] rounded-lg bg-secondary shadow-[0_1px_1px_1px_rgba(0,0,0,0.25)] shrink-0 ml-4 lg:ml-24 hover:scale-105 transition-all ease-in-out duration-300">
+        <figure class="h-[109px]  lg:h-[196px] w-full" >
           <img class="w-full h-full rounded-t-lg object-cover"
           src="./css/img/norway.jpg" alt="">
         </figure>
 
-        <div class="h-[78px] rounded-b-lg text-white p-4 overflow-hidden">
-          <h3 class="text-sm font-bold mb">
+        <div class="h-[78px] lg:h-[140px] rounded-b-lg text-white p-4 overflow-hidden">
+          <h3 class="text-sm lg:text-2xl font-bold lg:mb-4">
             Norway
           </h3>
-          <p class="text-[10px]">
+          <p class="text-[10px] lg:text-base">
             Beautiful landscapes
           </p>
         </div>
       </article>
 
-      <article class="w-[155px] h-[187] rounded-lg shadow-[0_1px_1px_1px_rgba(0,0,0,0.25)] shrink-0 hover:scale-105 transition-all ease-in-out duration-300">
-        <figure class="h-[109px] w-full" >
+      <article class="w-[155px] lg:w-[278px] rounded-lg shadow-[0_1px_1px_1px_rgba(0,0,0,0.25)] shrink-0 ml-4 hover:scale-105 transition-all ease-in-out duration-300">
+        <figure class="h-[109px] lg:h-[196px] w-full" >
           <img class="w-full h-full rounded-t-lg object-cover"
           src="./css/img/new_york.jpg" alt="">
         </figure>
 
-        <div class="h-[78px] rounded-b-lg text-terciary p-4 overflow-hidden">
-          <h3 class="text-sm font-bold mb">
+        <div class="h-[78px] lg:h-[140px] rounded-b-lg text-terciary p-4 overflow-hidden">
+          <h3 class="text-sm lg:text-2xl font-bold lg:mb-4">
             New York
           </h3>
-          <p class="text-[10px]">
+          <p class="text-[10px] lg:text-base">
             Concrete jungle
           </p>
         </div>
       </article>
 
-      <article class="w-[155px] h-[187] rounded-lg bg-secondary shadow-[0_1px_1px_1px_rgba(0,0,0,0.25)] shrink-0 hover:scale-105 transition-all ease-in-out duration-300">
-        <figure class="h-[109px] w-full" >
+      <article class="w-[155px] lg:w-[278px] rounded-lg bg-secondary shadow-[0_1px_1px_1px_rgba(0,0,0,0.25)] shrink-0 ml-4 hover:scale-105 transition-all ease-in-out duration-300">
+        <figure class="h-[109px] lg:h-[196px] w-full" >
           <img class="w-full h-full rounded-t-lg object-cover" 
           src="./css/img/yosemite.jpg" alt="">
         </figure>
 
-        <div class="h-[78px] rounded-b-lg text-white p-4 overflow-hidden">
-          <h3 class="text-sm font-bold mb">
+        <div class="h-[78px] lg:h-[140px] rounded-b-lg text-white p-4 overflow-hidden">
+          <h3 class="text-sm lg:text-2xl font-bold lg:mb-4">
             Yosemite
           </h3>
-          <p class="text-[10px]">
+          <p class="text-[10px] lg:text-base">
             Beautiful landscapes
           </p>
         </div>
       </article>
 
-      <article class="w-[155px] h-[187] rounded-lg shadow-[0_1px_1px_1px_rgba(0,0,0,0.25)] shrink-0 hover:scale-105 transition-all ease-in-out duration-300">
-        <figure class="h-[109px] w-full" >
+      <article class="w-[155px] lg:w-[278px] rounded-lg shadow-[0_1px_1px_1px_rgba(0,0,0,0.25)] shrink-0 ml-4 hover:scale-105 transition-all ease-in-out duration-300">
+        <figure class="h-[109px] lg:h-[196px] w-full" >
           <img class="w-full h-full rounded-t-lg object-cover"
           src="./css/img/seattle.jpg" alt="">
         </figure>
 
-        <div class="h-[78px] rounded-b-lg text-terciary p-4 overflow-hidden">
-          <h3 class="text-sm font-bold mb">
+        <div class="h-[78px] lg:h-[140px] rounded-b-lg text-terciary p-4 overflow-hidden">
+          <h3 class="text-sm lg:text-2xl font-bold lg:mb-4">
             Seattle
           </h3>
-          <p class="text-[10px]">
+          <p class="text-[10px] lg:text-base">
             Big City
           </p>
         </div>
       </article>
 
-      <article class="w-[155px] h-[187] rounded-lg bg-secondary shadow-[0_1px_1px_1px_rgba(0,0,0,0.25)] shrink-0 mr-4 hover:scale-105 transition-all ease-in-out duration-300">
-        <figure class="h-[109px] w-full" >
+      <article class="w-[155px] lg:w-[278px] rounded-lg bg-secondary shadow-[0_1px_1px_1px_rgba(0,0,0,0.25)] shrink-0 ml-4 hover:scale-105 transition-all ease-in-out duration-300">
+        <figure class="h-[109px] lg:h-[196px] w-full" >
           <img class="w-full h-full rounded-t-lg object-cover" 
           src="./css/img/switzerland.jpg" alt="">
         </figure>
 
-        <div class="h-[78px] rounded-b-lg text-white p-4 overflow-hidden">
-          <h3 class="text-sm font-bold mb">
+        <div class="h-[78px] lg:h-[140px] rounded-b-lg text-white p-4 overflow-hidden">
+          <h3 class="text-sm lg:text-2xl font-bold lg:mb-4">
             Switzerland
           </h3>
-          <p class="text-[10px]">
+          <p class="text-[10px] lg:text-base">
             Big City
           </p>
         </div>
@@ -144,100 +198,97 @@
 
   </section>
 
-  <section id="trending-stays" class="px-4">
+  <section id="trending-stays" class="px-4 lg:px-24 lg:grid lg:grid-cols-3 lg:grid-rows-[auto_repeat(3,_auto)] lg:gap-8">
 
-    <h2 class="my-4 text-2xl font-semibold text-primary">
+    <h2 class="my-4 lg:my-8 text-2xl lg:text-4xl font-semibold text-primary lg:col-span-3">
       Trending Stays
     </h2>
 
-    <div class="w-[354px] h-[402px] rounded-2xl bg-chicago bg-cover bg-center p-4 text-white mb-6">
-      <h3 class="text-2xl font-extrabold mt-6 mb-2">
+    <div class="w-[354px] h-[402px] lg:w-full lg:h-[654px] rounded-2xl bg-chicago bg-cover bg-center p-4  text-white mb-6 lg:m-0 lg:col-span-3">
+      <h3 class="text-2xl font-extrabold mt-6 mb-2 lg:text-right lg:mr-14 lg:text-4xl">
         Chicago
       </h3>
-      <p class="w-52 text-pretty">
+      <p class="w-52 lg:w-full text-pretty lg:text-right lg:pr-14 lg:text-2xl">
         2 rooms, bathroom and kitchen
       </p>
     </div>
 
-    <div class="w-[354px] h-[402px] rounded-2xl bg-LA bg-cover bg-center p-4 text-white mb-6">
-      <h3 class="text-2xl font-extrabold mt-6 mb-2">
+    <div class="w-[354px] lg:w-full h-[402px] lg:h-[836px] lg:row-span-2 rounded-2xl bg-LA bg-cover bg-center p-4 lg:p-8 text-white mb-6 lg:mb-0">
+      <h3 class="text-2xl font-extrabold mt-6 mb-2 lg:text-right lg:text-4xl">
         Los Angeles
       </h3>
-      <p class="w-52 text-pretty">
+      <p class="w-52 lg:w-[280px] lg:ml-[152px] lg:text-right text-pretty lg:text-2xl">
         4 rooms, 3 bathrooms, kitchen and private pool.
       </p>
     </div>
 
-    <div class="w-[354px] h-[402px] rounded-2xl bg-miami bg-cover bg-center p-4 text-white mb-6">
-      <h3 class="text-2xl font-extrabold mt-6 mb-2">
+    <div class="w-[354px] lg:w-auto h-[402px] lg:h-[402px] lg:col-span-2 rounded-2xl bg-miami bg-cover bg-center p-4 lg:px-8 text-white mb-6 lg:mb-0">
+      <h3 class="text-2xl font-extrabold mt-6 mb-2 lg:text-right lg:text-4xl">
         Miami
       </h3>
-      <p class="w-52 text-pretty">
+      <p class="w-52 lg:w-[330px] lg:ml-[630px] lg:text-right text-pretty lg:text-xl">
         3 rooms, 2 bathrooms,  kitchen and amazing sea view.
       </p>
     </div>
 
-    <div class="w-[354px] h-[402px] rounded-2xl bg-bali bg-cover bg-left p-4 text-white mb-6">
-      <h3 class="text-2xl font-extrabold mt-6 mb-2">
+    <div class="w-[354px] lg:w-auto h-[402px] lg:h-[402px] lg:col-span-2 rounded-2xl bg-bali bg-cover bg-left p-4 lg:px-8 text-white mb-6">
+      <h3 class="text-2xl font-extrabold mt-6 mb-2 lg:text-right lg:text-4xl">
         Bali
       </h3>
-      <p class="w-52 text-pretty">
+      <p class="w-52 lg:w-[300px] lg:ml-[660px] lg:text-right text-pretty lg:text-xl">
         2 rooms, 2 bathrooms,  kitchen and private pool.
       </p>
     </div>
 
   </section>
 
-  <section id="faqs" class="px-4 mt-6 mb-16">
-    <h2 class="text-2xl font-bold text-primary">
+  <section id="faqs" class="px-4 lg:px-24 w-5/6 mt-6 mb-16">
+    <h2 class="text-2xl lg:text-4xl font-bold text-primary">
       FAQs
     </h2>
 
-    <h3 class="mt-6 mb-3 font-semibold text-primary">
+    <h3 class="mt-6 mb-3 lg:text-3xl font-semibold text-primary">
       Payment Methods
     </h3>
-    <p class="text-xs w-4/5">
+    <p class="text-xs w-4/5 lg:text-xl">
       We accept VISA, MasterCard, American Express, Paypal and Binance
     </p>
 
-    <h3 class="mt-6 mb-3 font-semibold text-primary">
+    <h3 class="mt-6 mb-3 lg:text-3xl font-semibold text-primary">
       Cancellation Policy
     </h3>
-    <p class="text-xs w-4/5">
+    <p class="text-xs w-4/5 lg:text-xl">
       We accept VISA, MasterCard, American Express, Paypal and Binance
     </p>
 
-    <h3 class="mt-6 mb-3 font-semibold text-primary">
+    <h3 class="mt-6 mb-3 lg:text-3xl font-semibold text-primary">
       Long Stays
     </h3>
-    <p class="text-xs w-4/5">
-      We accept VISA, MasterCard, American Express, Paypal and Binance
-    </p>
-    <p class="text-xs w-4/5">
+    <p class="text-xs w-4/5 lg:text-xl">
       We accept VISA, MasterCard, American Express, Paypal and Binance
     </p>
 
-    <h3 class="mt-6 mb-3 font-semibold text-primary">
+    <h3 class="mt-6 mb-3 lg:text-3xl font-semibold text-primary">
       Cancellation Policy
     </h3>
-    <p class="text-xs w-4/5">
+    <p class="text-xs w-4/5 lg:text-xl">
       We accept VISA, MasterCard, American Express, Paypal and Binance
     </p>
 
-    <h3 class="mt-6 mb-4 font-semibold text-primary">
+    <h3 class="mt-6 mb-4 lg:text-3xl font-semibold text-primary">
       Cancellation Policy
     </h3>
-    <p class="text-xs w-4/5">
+    <p class="text-xs w-4/5 lg:text-xl">
       We accept VISA, MasterCard, American Express, Paypal and Binance
     </p>
 
   </section>
 
-  <footer class="px-4 border border-gray-400 bg-[#E5E5E5] opacity-25 ">
-    <h2 class="my-4 text-lg font-semibold">
+  <footer id="about-us" class="px-4 lg:px-24 lg:pb-8 border border-gray-400 bg-[#E5E5E5] opacity-25 ">
+    <h2 class="my-4 lg:my-8 text-lg lg:text-3xl font-semibold">
       About Us</h2>
 
-    <ol class="text-sm">
+    <ol class="text-sm lg:text-xl lg:flex lg:flex-col lg:gap-4">
       <li>Investors</li>
       <li>Jobs</li>
       <li>Privacy policy</li>
@@ -247,16 +298,16 @@
     </ol>
 
     <div class="py-3 flex justify-start items-center gap-4">
-      <figure class="w-6 h-6">
+      <figure class="w-6 h-6 lg:w-10 lg:h-10">
         <img class="w-full h-full" src="./css/svg/twitter.svg" alt="">
       </figure>
-      <figure class="w-6 h-6">
+      <figure class="w-6 h-6 lg:w-10 lg:h-10">
         <img class="w-full h-full text-primary" src="./css/svg/instagram.svg" alt="">
       </figure>
     </div>
 
   </footer>
-  <navbar id="tab-bar" class="h-[72px] flex justify-center items-center gap-8">
+  <navbar id="tab-bar" class="h-[72px] flex justify-center items-center gap-8 lg:hidden">
 
     <a href="#top">
       <figure class="w-8 h-8 text-gray-300 hover:text-primary transition duration-200 ease-in">
