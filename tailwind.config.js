@@ -19,7 +19,7 @@ module.exports = {
         'switzerland': "url('/public/css/img/switzerland.jpg')",
         'bali': "url('/public/css/img/bali.jpg')",
         'norway': "url('/public/css/img/norway.jpg')",
-        'chicago': "url('/public/css/img/chicago.jpg')",
+        'chicago': "url('./public/css/img/chicago.jpg')",
         'europe': "url('/public/css/img/europe.jpg')",
         'iceland': "url('/public/css/img/iceland.jpg')",
       },
