@@ -849,19 +849,19 @@ video {
 }
 
 .bg-LA {
-  background-image: url('/public/css/img/LA.jpg');
+  background-image: url('../img/LA.jpg');
 }
 
 .bg-bali {
-  background-image: url('/public/css/img/bali.jpg');
+  background-image: url('../img/bali.jpg');
 }
 
 .bg-chicago {
-  background-image: url('/public/css/img/chicago.jpg');
+  background-image: url('../img/chicago.jpg');
 }
 
 .bg-miami {
-  background-image: url('/public/css/img/miami.jpg');
+  background-image: url('../img/miami.jpg');
 }
 
 .bg-cover {
